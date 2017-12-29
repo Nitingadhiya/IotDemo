@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-left>External Device List Screen</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="data_not">
+    <ion-card-header class="font16 sub_header_color">
+      No Device Found.
+    </ion-card-header>
+  </ion-card>
+  <ion-list radio-group [(ngModel)]="radio_value">
+  <ion-card *ngFor="let data_m of product_data let i=index">
+    <ion-card-header class="font16 sub_header_color">
+      Device Name {{i}}
+    </ion-card-header>
+    <ion-card-content class="cont_card">
+    <ion-item>
+      <ion-label>
+        <b>Modal name : </b> {{data_m.modal_name}}
+        <br/>
+        <b>URL Base : </b> {{data_m.url_base}}
+        <!--<b>UDN Base : </b> {{data_m.UDN}}-->
+      </ion-label>
+      <ion-radio  value="{{i}}" [attr.id]="location"  name="location" (ionSelect)="on_radioChange(data_m.presentation_URL, data_m.url_base)"></ion-radio>
+    </ion-item>
+  </ion-card-content>
+    <!--<ion-card-header class="font16 sub_header_color">
+      Device Name {{i}}
+    </ion-card-header>
+    <ion-card-content class="cont_card">
+       <!--<b>USN :</b> {{data.USN}}-->
+
+       <!--<b>Location:</b> {{data.LOCATION}}-->
+
+
+       <!--<div *ngFor="let data_m of product_data; let j=index">
+        <span *ngIf="i == j"><b>Modal name : </b> {{data_m.modal_name}}</span>
+         <br/>
+         <b>Presentation url :</b> {{data_m.presentation_URL}}
+        <br/>
+        <b>URL Base : </b> {{data.url_base}}
+      </div>-->
+    <!--</ion-card-content>-->
+  </ion-card>
+</ion-list>
+</ion-content>
+<ion-footer>
+  <div class="btn_top">
+    <ion-row center class="center margin_btn_gap">
+      <button ion-button class="btn_cls" (click)="EXT_wifi_click()">Button 3</button>
+    </ion-row>
+  </div>
+</ion-footer>

@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-left>Device Details Screen</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<!--
+  <ion-row class="sub_header_color">
+    <ion-col text-center class="font16" col-5>
+      Device Name :
+    </ion-col>
+    <ion-col text-center class="font14" col-7>
+      {{Friendly_name}}
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="sub_header_color">
+    <ion-col text-center class="font16" col-5>
+      Signal quality :
+    </ion-col>
+    <ion-col text-center class="font14" col-7>
+      {{quality}} {{signal_unit}}
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row class="sub_header_color">
+    <ion-col text-center class="font16">
+      Device Name :
+    </ion-col>
+  </ion-row>
+  <ion-row class="">
+    <ion-col text-center class="font16">
+      <ion-icon name="wifi"></ion-icon> {{Friendly_name}}
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="sub_header_color">
+    <ion-col text-center class="font16">
+      Signal quality :
+    </ion-col>
+  </ion-row>
+  <ion-row class="">
+    <ion-col text-center class="font16">
+      <ion-icon name="stats"></ion-icon>  {{quality}} {{signal_unit}}
+    </ion-col>
+  </ion-row> -->
+
+  <ion-card>
+    <ion-card-header class="font16 sub_header_color">
+      Device Name
+    </ion-card-header>
+    <ion-card-content class="cont_card">
+      <ion-icon name="wifi"></ion-icon> {{Friendly_name}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header class="font16 sub_header_color">
+      Signal quality
+    </ion-card-header>
+    <ion-card-content class="cont_card">
+      <ion-icon name="stats"></ion-icon>  {{quality}} {{signal_unit}}
+    </ion-card-content>
+  </ion-card>
+
+  <div class="btn_top">
+  <ion-row center class="center">
+    <button ion-button class="btn_cls font14" (click)="appendix_channel1(0)" [ngStyle]="{'background-color': button1}">Scheduler 1</button>
+  </ion-row>
+  <br/>
+  <ion-row center class="center">
+    <button ion-button class="btn_cls font14" (click)="appendix_channel2(0)" [ngStyle]="{'background-color': button2}">Scheduler 2</button>
+  </ion-row>
+  <br/>
+  <ion-row center class="center">
+    <button ion-button class="btn_cls font14" (click)="appendix_channel3(0)" [ngStyle]="{'background-color': button3}">Scheduler 3</button>
+  </ion-row>
+</div>
+
+  <!--<ion-row>
+
+  <ion-list text-center style="margin-top:30px !important;">
+  <ion-item text-center color="primary">
+    <b>Device Name :</b>
+  </ion-item>
+  <ion-item text-center>
+    <ion-icon name="wifi"></ion-icon> {{Friendly_name}}
+  </ion-item>
+  </ion-list>
+</ion-row>
+<ion-row>
+  <ion-list text-center style="margin-top:20px !important;">
+    <ion-item text-center color="primary">
+      <b>signal quality :</b>
+    </ion-item>
+    <ion-item text-center>
+    <ion-icon name="stats"></ion-icon> {{quality}} {{signal_unit}}
+  </ion-item>
+  </ion-list>
+</ion-row>-->
+</ion-content>

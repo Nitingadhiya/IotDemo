@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>IOT Demo app</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card class="margin_card_gap">
+  <ion-list radio-group [(ngModel)]="ip_relationship">
+  <ion-item>
+    <ion-label class="font16">Use apiary address</ion-label>
+    <ion-radio value="https://private-bbe03-rmld001.apiary-mock.com" checked (ionSelect)="on_radioChange(ip_relationship)"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label class="font16">Use Device Wifi IP address</ion-label>
+    <ion-radio value="http://192.168.4.1"></ion-radio> <!-- (ionSelect)="on_radioChange(ip_relationship)"-->
+  </ion-item>
+</ion-list>
+</ion-card>
+
+  <ion-row center class="center margin_btn_gap">
+    <button ion-button (click)="device_wifi()" class="btn_cls">Device Wifi</button>
+  </ion-row>
+  <br/>
+  <ion-row center class="center">
+    <button ion-button (click)="external_wifi()" class="btn_cls">External Wifi</button>
+  </ion-row>
+  <br/>
+  <ion-row center class="center hide">
+    <button ion-button (click)="refreshIP()" class="btn_cls">Refresh IP</button>
+  </ion-row>
+
+  <ion-card class="margin_card_gap">
+    <ion-item class="ion_item">
+      <ion-input type="text" placeholder="Insert only Ip address" [(ngModel)]="url_input"></ion-input>
+    </ion-item>
+    <ion-row center class="center device_inp">
+      <button ion-button (click)="device_wifi_input()" class="btn_cls">Custom Wifi IP</button>
+    </ion-row>
+  </ion-card>
+
+<ion-card class="margin_btn_gap hide">
+  <ion-card-header>
+    Device WiFi IP
+  </ion-card-header>
+  <ion-card-content>
+    {{wifiIP}}
+  </ion-card-content>
+</ion-card>
+</ion-content>

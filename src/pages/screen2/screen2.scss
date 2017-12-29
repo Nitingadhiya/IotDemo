@@ -1,0 +1,18 @@
+page-screen2 {
+  .list{margin:0px !important;width:100%;}
+  ion-item{border: none !important;}
+  ion-icon{color: #000;}
+  .back-button-text{color:#000;}
+  .sub_header_color{background-color: color($colors,primary);color: color($colors_new,defcolor);padding: 10px 5px;}
+  .cont_card{padding: 10px 5px !important;}
+  .card{margin-top:20px;}
+  .btn_cls{margin:auto;width:60%;}
+  .btn_top{margin-top:10px;margin-bottom:10px;}
+}
+
+
+.font12{font-size:12px;}
+.font14{font-size:14px;}
+.font16{font-size:16px;}
+.font18{font-size:18px;}
+.font20{font-size:20px;}
